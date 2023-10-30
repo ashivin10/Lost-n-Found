@@ -1,40 +1,95 @@
-tml,
 body {
-  height: 100%;
-  font-family: 'Kanit', sans-serif;
+	color: #f3efef;
+	background: #ffffff;
+	font-family: 'Kanit', sans-serif;
 font-family: 'Poppins', sans-serif;
 }
-
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
+.form-control {
+	height: 40px;
+	box-shadow: none;
+	color: #000000;
 }
-
-.form-signin .form-floating:focus-within {
-  z-index: 2;
+.form-control:focus {
+	border-color: #286ce9;
 }
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.form-control, .btn {        
+	border-radius: 3px;
 }
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.signup-form {
+	width: 400px;
+	margin: 50px auto;
+	padding: 30px 0;
+  	font-size: 15px;
 }
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
+.signup-form h2 {
+	color: #000000;
+	margin: 0 0 15px;
+	position: relative;
+	text-align: center;
+}
+.signup-form h2:before, .signup-form h2:after {
+	content: "";
+	height: 2px;
+	width: 30%;
+	background: #d4d4d4;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+}	
+.signup-form h2:before {
+	left: 0;
+}
+.signup-form h2:after {
+	right: 0;
+}
+.signup-form .hint-text {
+	color: #000000;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.signup-form form {
+	color: #000000;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #f2f3f7;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.signup-form .form-group {
+	margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"] {
+	margin-top: 3px;
+}
+.signup-form .btn {        
+	font-size: 16px;
+	font-weight: bold;		
+	min-width: 140px;
+	outline: none !important;
+}
+.signup-form .row div:first-child {
+	padding-right: 10px;
+}
+.signup-form .row div:last-child {
+	padding-left: 10px;
+}    	
+.signup-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.signup-form a:hover {
+	text-decoration: none;
+}
+.signup-form form a {
+	color: #1a6eec;
+	text-decoration: none;
+}	
+.signup-form form a:hover {
+	text-decoration: underline;
+}  
+.text-center{
+    color: #000000;
+}
+.text-center a{
+    color: #4512ff;
+}
