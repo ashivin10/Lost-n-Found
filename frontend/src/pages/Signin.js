@@ -1,9 +1,9 @@
 import React from 'react'
-import "./Signup.css"
-function Signup() {
+import "./Signin.css"
+function Signin() {
   return (
     <>
-        <div className="signup-form">
+        <div className="signin-form">
     <form >
 		<h2>Sign In</h2>
 		<p className="hint-text">Login to continue.</p>
@@ -16,13 +16,13 @@ function Signup() {
         </div>
 		        
 		<div className="form-group">
-            <button type="submit" className="btn btn-primary btn-lg btn-block">Register Now</button>
+            <button type="submit" className="btn btn-primary btn-lg btn-block">Sign In</button>
         </div>
     </form>
-	<div className="text-center">Don't have an account? <a href="/">Sign Up</a></div>
+	<div className="text-center">Don't have an account? <a href="/signup">Sign Up</a></div>
 </div>
     </>
   )
 }
 
-export default Signup
+export default Signin

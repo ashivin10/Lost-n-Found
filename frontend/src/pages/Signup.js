@@ -32,7 +32,7 @@ function Signup() {
             <button type="submit" className="btn btn-primary btn-lg btn-block">Register Now</button>
         </div>
     </form>
-	<div className="text-center">Already have an account? <a href="/">Sign in</a></div>
+	<div className="text-center">Already have an account? <a href="/signin">Sign in</a></div>
 </div>
     </>
   )
