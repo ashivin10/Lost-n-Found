@@ -26,14 +26,14 @@ const storage = multer.diskStorage({
                     mobileno:req.body.mobileno,
                     location:req.body.location,
                     description:req.body.description,
-                    image:{
-                        data:req.file.filename,
-                        contentType:'image/png'
-                    }
-                }
+                    image:
+                      req.file.filename,
+                }   
+                
             )
-            newImage.save().then(()=>res.status(200).send("uploaded Sucessfully")).catch((err)=>console.log(err))
-
+            newImage.save().then(()=>res.status(200).send("uploaded Sucessfully")).catch((err)=>res.status(409).json({ message : err.message }))
+                    if(err)
+                    console.log(err);
         }
     })
   })

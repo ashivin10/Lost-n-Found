@@ -8,9 +8,7 @@ const lostItem = new mongoose.Schema({
 	description:{
 		type:String
 	},
-	image: { data: Buffer,
-		contentType:String, 
-		 }
+	image: String
 });
 
 module.exports = mongoose.model("LostItem", lostItem);

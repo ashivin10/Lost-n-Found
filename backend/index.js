@@ -13,7 +13,7 @@ connection();
 // middlewares
 app.use(express.json());
 app.use(cors());
-
+app.use('/upload', express.static('upload'))
 //routes
 
 app.use("/api/users", userRoutes);//Creating users
