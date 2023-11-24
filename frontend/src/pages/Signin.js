@@ -17,10 +17,13 @@ function Signin() {
 		try {
 			const url = "http://localhost:8080/api/login";
 			const { data: res } = await axios.post(url, data);
+			console.log(res)
 			localStorage.setItem("token", res.data);
       		localStorage.setItem("user", res.user);
 			  localStorage.setItem("last", res.user_last);
 			  localStorage.setItem("email", res.email);
+			  localStorage.setItem("mobileno", res.mobileno);
+			  localStorage.setItem("id", res.id);
 
 
 			window.location = "/";

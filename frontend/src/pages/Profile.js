@@ -1,33 +1,67 @@
 import React from 'react'
-import './Profile.css'
 import Navbar from '../components/navbar'
-function Profile() {
+import {  useNavigate } from "react-router-dom";
 
+function Profile() {
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    localStorage.removeItem("last");
+    localStorage.removeItem("email");
+    localStorage.removeItem("mobileno");
+    localStorage.removeItem("id");
+    navigate("/signin");
+
+
+
+
+};
     const firstname = localStorage.getItem("user");
     const lastname = localStorage.getItem("last");
     const email = localStorage.getItem("email");
+    const mobileno = localStorage.getItem("mobileno");
 
+ const user = firstname+" "+lastname
   return (<>
   <Navbar/>
-  <div className="d-flex justify-content-center align-items-center">
+  <section className="vh-100" style={{'background-color':' #eee;'}}>
+  <div className="container py-5 h-100">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="col-md-12 col-xl-4">
 
-    <div className="container mt-5 mb-3 p-3 d-flex justify-content-center">
-         <div className="card p-4"> 
-         <div className=" image d-flex flex-column justify-content-center align-items-center"> <button className="btn btn-secondary">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCzqIZuh9L1JjZ2B9_WOjGtRv_g0PiDlJj5Q&usqp=CAU" height="100" width="100"  alt ="" /></button> 
-          <span className="name mt-3">{firstname+" "+lastname} </span> 
-          <div className="d-flex flex-row justify-content-center align-items-center gap-2"> 
-          <span className="name mt-3">Email:{email} </span> 
+        <div className="card" style={{"border-radius": "15px;"}}>
+          <div className="card-body text-center">
+            <div className="mt-3 mb-4">
+              <img src="https://static.thenounproject.com/png/4314581-200.png" alt='prof'
+                className="rounded-circle img-fluid" style={{"width": "100px;"}} />
             </div>
-         <div className=" d-flex mt-2"> <button className="btn1 btn-dark">Requests</button> 
-         </div> 
-         <div className=" d-flex mt-2"> 
-         <button className="btn1 btn-dark">My Posts</button> 
-         </div>
-          <div className="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> 
-             <span><i className="fa fa-twitter"></i></span> <span><i className="fa fa-facebook-f"></i></span> <span><i className="fa fa-instagram"></i></span> <span><i className="fa fa-linkedin"></i></span> </div> <div className=" px-2     rounded mt-4 date "> <span className="join">Copyright &copy; Your Website 2023  </span> </div> </div> </div>
-</div>
+            <h4 className="mb-2">{user}</h4>
+            <p className="text-muted mb-4">{mobileno} <span className="mx-2">|</span> <a
+                href="/">{email}</a></p>
+            
+            <div className='d-flex flex-column'>
+
+              <a href="/myPost" type="button" className="btn btn-primary btn-rounded btn-lg mt-2">
+
+              My Post
+              </a>
+            <a href="/notification" type="button" className="btn btn-primary btn-rounded btn-lg mt-2">
+
+             Notifications
+            </a>
+
+            </div>
+            <button className="btn btn-primary btn-rounded btn-lg mt-2" onClick={logout}>LOG OUT</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+</section>
+  
   </>
   )
 }

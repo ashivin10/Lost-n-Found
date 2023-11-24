@@ -23,9 +23,11 @@ const storage = multer.diskStorage({
             const newImage = new itemModel(
                 {
                     itemName:req.body.itemName,
+                    userid:req.body.userid,
                     mobileno:req.body.mobileno,
                     location:req.body.location,
                     description:req.body.description,
+
                     image:
                       req.file.filename,
                 }   

@@ -6,11 +6,12 @@ import {  useNavigate } from "react-router-dom";
 import FormData from 'form-data'
 import './Post.css'
 function Post() {
+  const id = localStorage.getItem("id");
 
     const [Pdata, setPdata] = useState({
 		itemName: "",
 		mobileno: "",
-        location:"",
+    location:"",
 		description: "",
 	});
     const formData = new FormData();
@@ -34,6 +35,7 @@ function Post() {
     const handleSubmit = async (e) => {
 		e.preventDefault();
         formData.append("itemName", Pdata.itemName);
+        formData.append("userid", id);
         formData.append("mobileno", Pdata.mobileno);
         formData.append("location", Pdata.location);
         formData.append("description", Pdata.description);

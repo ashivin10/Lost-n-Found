@@ -6,6 +6,9 @@ import Hero from './pages/Hero'
 import Post from './pages/Post'
 import Search from './pages/search'
 import Profile from './pages/Profile'
+import MyPost from './pages/myPost'
+import Notification from './pages/Notification'
+
 function App() {
   const user = localStorage.getItem("token");
   return (
@@ -18,6 +21,9 @@ function App() {
       <Route path="/signup" exact element={<Signup />} />
       <Route path="/signin" exact element={<Signin />} />
       <Route path="/profile" exact element={<Profile />} />
+      <Route path="/myPost" exact element={<MyPost/>} />
+      <Route path="/notification" exact element={<Notification/>} />
+
       </Routes>
     </div>
   );
