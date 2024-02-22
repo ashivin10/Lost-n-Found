@@ -35,6 +35,7 @@ export default function MediaCard(props) {
 	console.log("==",Rdata)
     setOpen(false);
 	try {
+    console.log(mobileno)
 		const url = "http://localhost:8080/api/sendreq";
 		const { data: res } = await axios.post(url,Rdata);
 		navigate("/");

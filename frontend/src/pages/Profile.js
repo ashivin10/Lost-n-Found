@@ -14,9 +14,6 @@ function Profile() {
     localStorage.removeItem("id");
     navigate("/signin");
 
-
-
-
 };
     const firstname = localStorage.getItem("user");
     const lastname = localStorage.getItem("last");

@@ -17,6 +17,7 @@ function Notification() {
           console.log(params)
       axios.get("http://localhost:8080/api/getreq",{params}).then((response) => {
         setitems(response.data);
+        console.log(response.data)
       });
     }, []);
 
